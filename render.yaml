@@ -1,11 +1,15 @@
 services:
   - type: web
-    name: net-curea-backend
+    name: my-flask-api
     runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    buildCommand: ""
+    startCommand: gunicorn app:app
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
       - key: GEMINI_API_KEY
         value: AIzaSyBxA-q-y9rQkP6Lfxc9kE7bMr6_AZfx-RA
       - key: MONGODB_URI
         value: mongodb+srv://medigrid:medigrid2025@cluster0.amqrmdr.mongodb.net/
+
+

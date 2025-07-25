@@ -2,7 +2,7 @@ services:
   - type: web
     name: my-flask-api
     runtime: python
-    buildCommand: ""
+    buildCommand: "buildCommand: pip install --upgrade pip setuptools wheel"
     startCommand: gunicorn app:app
     envVars:
       - key: PYTHON_VERSION

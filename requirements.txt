@@ -8,3 +8,6 @@ joblib==1.3.2
 numpy==1.24.3
 scikit-learn==1.3.0
 requests==2.31.0
+pymongo
+google-generativeai
+gunicorn

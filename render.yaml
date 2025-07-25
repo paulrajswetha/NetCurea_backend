@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: net-curea-backend
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyBxA-q-y9rQkP6Lfxc9kE7bMr6_AZfx-RA
+      - key: MONGODB_URI
+        value: mongodb+srv://medigrid:medigrid2025@cluster0.amqrmdr.mongodb.net/
